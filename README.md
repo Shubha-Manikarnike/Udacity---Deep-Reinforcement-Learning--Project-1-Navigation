@@ -1,6 +1,7 @@
 # Udacity-Deep-Reinforcement-Learning-Project-1-Navigation
 My Solution to train an Agent in the Banana Collector Environment using DQN
 
+[](Images/Navigation.gif)
 
 This project repository contains my work for the Udacity's Deep Reinforcement Learning Nanodegree Project 1: Navigation.
 Project's goal
