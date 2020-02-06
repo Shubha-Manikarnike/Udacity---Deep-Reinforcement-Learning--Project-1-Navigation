@@ -1,4 +1,4 @@
-# Banana Frenzy Agent
+# Banana Collector Agent
 
 ## Project's goal
 
@@ -61,7 +61,7 @@ The code consist of :
 
 - model.py : In this python file, a PyTorch QNetwork class is implemented. This is a regular fully connected Deep Neural Network using the [PyTorch Framework](https://pytorch.org/docs/0.4.0/). This network will be trained to predict the action to perform depending on the environment observed states. This Neural Network is used by the DQN agent and is composed of :
   - the input layer which size depends of the state_size parameter passed in the constructor
-  - 2 hidden fully connected layers of 1024 cells each
+  - 2 hidden fully connected layers of 256 cells each
   - the output layer which size depends of the action_size parameter passed in the constructor
 - dqn_agent.py : In this python file, a DQN agent and a Replay Buffer memory used by the DQN agent) are defined.
   - The DQN agent class is implemented, as described in the Deep Q-Learning algorithm. It provides several methods :
@@ -100,7 +100,7 @@ UPDATE_EVERY = 4        # how often to update the network
 The Neural Networks use the following architecture :
 
 ```
-Input nodes (37) -> Fully Connected Layer (1024 nodes, Relu activation) -> Fully Connected Layer (1024 nodes, Relu activation) -> Ouput nodes (4)
+Input nodes (37) -> Fully Connected Layer (256 nodes, Relu activation) -> Fully Connected Layer (256 nodes, Relu activation) -> Ouput nodes (4)
 ```
 
 The Neural Networks use the Adam optimizer with a learning rate LR=5e-4 and are trained using a BATCH_SIZE=64
@@ -111,7 +111,7 @@ Given the chosen architecture and parameters, our results are :
 
 ![Score evolution during the training](images/score_plot.png)
 
-**These results meets the project's expectation as the agent is able to receive an average reward (over 100 episodes) of at least +13, and in 1023 episodes only** (In comparison, according to Udacity's solution code for the project, their agent was benchmarked to be able to solve the project in fewer than 1800 episodes)
+**These results meets the project's expectation as the agent is able to receive an average reward (over 100 episodes) of at least +13, and in 812 episodes only** (In comparison, according to Udacity's solution code for the project, their agent was benchmarked to be able to solve the project in fewer than 1800 episodes)
 
 ### Ideas for future work
 
